@@ -11,7 +11,7 @@ const SectionOne = () => {
               quibusdam vitae ad.
             </div>
             <div className="w-full">
-              <button className="block py-3 px-16 mx-auto rounded-full outline outline-2 outline-sky-700 hover:bg-sky-200 color-sky-800 hover:outline-0 font-semibold uppercase">
+              <button className="block py-3 px-16 rounded-full outline outline-2 outline-blue-600 hover:bg-blue-200  hover:outline-0 font-semibold uppercase">
                 Book an appointment
               </button>
             </div>
