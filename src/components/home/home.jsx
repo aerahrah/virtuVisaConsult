@@ -2,6 +2,7 @@ import NavBar from "../navbar/navbar";
 import SectionTwo from "./sectionTwo";
 import SectionOne from "./sectionOne";
 import SectionThree from "./sectionThree";
+import Testimonial from "./testimonial";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <Testimonial />
     </div>
   );
 };
