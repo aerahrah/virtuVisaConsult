@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
@@ -23,6 +23,15 @@ const Testimonial = () => {
     else setCurrent(current + 1);
   };
 
+  useEffect(() => {
+    const autoTransition = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => {
+      clearInterval(autoTransition);
+    };
+  }, [current]);
   return (
     <div className=" w-full max-w-[1164px] mx-auto">
       <div className="overflow-hidden relative">
@@ -69,16 +78,17 @@ const Testimonial = () => {
         </div>
       </div>
       <div className=" py-4 flex justify-center gap-3 w-full z-30">
-        {slides.map((s, i) => (
-          <div
+        {slides.map((img, i) => (
+          <img
             onClick={() => {
               setCurrent(i);
             }}
+            src={img}
             key={"circle" + i}
-            className={`rounded-full w-5 h-5 cursor-pointer  ${
-              i == current ? "bg-white" : "bg-gray-500"
+            className={`transform rounded-full w-7 h-7 cursor-pointer  ${
+              i == current ? "scale-[1.4]" : "bg-gray-500"
             }`}
-          ></div>
+          ></img>
         ))}
       </div>
     </div>
