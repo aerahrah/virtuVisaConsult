@@ -1,7 +1,7 @@
 const SectionOne = () => {
   return (
-    <div className="bg-neutral-100">
-      <div className="h-screen pt-16 w-full max-w-[1164px] mx-auto">
+    <div className="bg-neutral-100 px-16 text-neutral-800">
+      <div className="h-screen py-24 w-full max-w-[1164px] mx-auto">
         <div className=" h-full flex items-center gap-6">
           <div className="flex flex-col gap-14">
             <div className="flex flex-col gap-4">

@@ -1,6 +1,6 @@
 const SectionTwo = () => {
   return (
-    <div className="min-h-screen bg-neutral-900 py-16 text-neutral-300">
+    <div className="min-h-screen bg-neutral-900 py-24 px-16    text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-4 items-center">

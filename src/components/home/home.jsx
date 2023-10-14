@@ -2,7 +2,7 @@ import NavBar from "../navbar/navbar";
 import SectionTwo from "./sectionTwo";
 import SectionOne from "./sectionOne";
 import SectionThree from "./sectionThree";
-import Testimonial from "./testimonial";
+import SectionFour from "./sectionFour";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
-      <Testimonial />
+      <SectionFour />
     </div>
   );
 };
