@@ -5,9 +5,8 @@ const SectionThree = () => {
         <div className=" h-full flex items-center gap-6">
           <div className="flex flex-col gap-14 w-[50%]">
             <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-bold text-blue-500">Why choose us</h3>
               <h1 className="text-5xl font-extrabold capitalize">
-                How to strengthen your business
+                Why choose us
               </h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
