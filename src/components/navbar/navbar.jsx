@@ -2,15 +2,31 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="w-full flex justify-between py-6 bg-blue-600 fixed shadow-md z-50">
+    <div className="w-full flex justify-between py-4 bg-blue-600 fixed shadow-md z-50">
       <div className="flex justify-between w-full max-w-[960px] mx-auto">
         <h1>logo</h1>
-        <ul className="flex gap-6 text-blue-50">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <li>Resources</li>
-          <li>Contact</li>
+        <ul className="flex gap-4 text-blue-50 transition ">
+          <Link to="/" className="hover:outline rounded py-1 px-3 duration-100">
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="hover:outline rounded py-1 px-3 duration-100"
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            className="hover:outline rounded py-1 px-3 duration-100"
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="hover:outline rounded py-1 px-3 duration-100"
+          >
+            Contact
+          </Link>
         </ul>
       </div>
     </div>

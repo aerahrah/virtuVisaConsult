@@ -7,6 +7,7 @@ import {
   BiMailSend,
   BiSolidMap,
 } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,13 +21,13 @@ const Footer = () => {
               et dolore magna aliqua.
             </p>
             <ul className="flex gap-4  ">
-              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100">
+              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100 hover:bg-blue-600">
                 <BiLogoFacebookCircle className="h-8 w-8" />
               </li>
-              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100">
+              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100 hover:bg-blue-600">
                 <BiLogoTwitter className="h-8 w-8" />
               </li>
-              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100">
+              <li className="p-1 bg-neutral-600 rounded-full cursor-pointer transform hover:scale-[1.04] duration-100 hover:bg-blue-600">
                 <BiLogoInstagram className="h-8 w-8" />
               </li>
             </ul>
@@ -35,24 +36,21 @@ const Footer = () => {
             <h3 className="text-2xl font-bold capitalize">quick link</h3>
             <ul className="capitalize flex flex-col gap-2 ">
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
-                <BiCaretRight />
-                home
+                <BiCaretRight className="text-blue-500" />
+                <Link to="/">home</Link>
               </li>
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
-                <BiCaretRight />
-                About us
+                <BiCaretRight className="text-blue-500" />
+                <Link to="/about">About us</Link>
               </li>
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
-                <BiCaretRight />
-                service
+                <BiCaretRight className="text-blue-500" />
+                <Link to="/services"> services</Link>
               </li>
+
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
-                <BiCaretRight />
-                Blog
-              </li>
-              <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
-                <BiCaretRight />
-                contact
+                <BiCaretRight className="text-blue-500" />
+                <Link to="/contact">contact</Link>
               </li>
             </ul>
           </div>

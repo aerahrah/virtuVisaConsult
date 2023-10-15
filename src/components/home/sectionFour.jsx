@@ -1,8 +1,15 @@
 import Testimonial from "./testimonial";
-
+import testimonialBg from "../../assets/img/map.png";
 const SectionFour = () => {
   return (
-    <div className="bg-white py-24 px-16 text-neutral-800">
+    <div
+      className="bg-white py-24 px-16 text-neutral-800 "
+      style={{
+        backgroundImage: `url(${testimonialBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4 items-center">
