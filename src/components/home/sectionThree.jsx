@@ -61,10 +61,10 @@ const SectionThree = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-full w-[50%]">
-            <div className="absolute top-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 rounded-lg"></div>
-            <div className="absolute top-[-5rem] right-6 h-64 w-64 bg-neutral-300  outline outline-blue-300 rounded-lg"></div>
-            <div className="absolute bottom-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 rounded-lg"></div>
+          <div className="relative h-full w-[50%] transform transition">
+            <div className="absolute top-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 shadow-md rounded-lg hover:scale-[1.02] duration-100 hover:shadow-lg"></div>
+            <div className="absolute top-[-5rem] right-6 h-64 w-64 bg-neutral-300  outline outline-blue-300 shadow-md rounded-lg hover:scale-[1.02] duration-100 hover:shadow-lg"></div>
+            <div className="absolute bottom-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 shadow-md rounded-lg hover:scale-[1.02] duration-100 hover:shadow-lg"></div>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ const Testimonial = () => {
           {slides.map((img, index) => (
             <div className="w-full" key={index}>
               <div className="w-[100vw] max-w-[100%]">
-                <div className="relative  min-h-64 bg-neutral-100 shadow-md  rounded-lg w-[80vw] max-w-[70%] ml-[14vw] mx-auto">
+                <div className="relative  min-h-64 bg-white   shadow-lg border-[1px] border-neutral-200 rounded-lg w-[80vw] max-w-[70%] ml-[14vw] mx-auto">
                   <div className="absolute top-1/2 -translate-y-1/2 left-[-5rem] z-50">
                     <img
                       className="w-40 h-40 rounded-full"

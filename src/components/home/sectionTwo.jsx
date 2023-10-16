@@ -1,20 +1,53 @@
 import { BiRightArrowAlt } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const SectionTwo = () => {
+  const [ref, inView] = useInView();
+  const [ref2, inView2] = useInView();
+
+  const headerAnim = {
+    hidden: { opacity: 0, y: -120, scale: 0.75 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.75 },
+    },
+  };
+
+  const cardAnim = {
+    hidden: { opacity: 0, y: 100, scale: 0.75 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.75 } },
+  };
+
   return (
     <div className="min-h-screen bg-neutral-900 py-24 px-16    text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full ">
         <div className="flex flex-col gap-20 ">
-          <div className="flex flex-col gap-4 items-center">
+          <motion.div
+            className="flex flex-col gap-4 items-center"
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={headerAnim}
+          >
+            {console.log(inView)}
             <h3 className="text-lg font-bold">Working Process</h3>
             <h1 className="text-5xl font-bold">How It Work</h1>
             <p className="max-w-[50%] text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
-          </div>
-          <div className="flex gap-8 transition duration-100">
-            <div className="relative overflow-hidden flex flex-col gap-4 bg-neutral-800 p-6 pt-10 justify-start shadow-md rounded hover:outline outline-[1px] outline-blue-500 ">
+          </motion.div>
+          <motion.div
+            className="flex gap-8 h-full"
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={cardAnim}
+          >
+            <div className="relative overflow-hidden flex flex-col gap-4 bg-neutral-800 p-6 pt-10 justify-start shadow-md rounded hover:outline outline-[1px] outline-blue-500">
               <h3 className="text-2xl font-bold capitalize">
                 Business Thought
               </h3>
@@ -23,7 +56,7 @@ const SectionTwo = () => {
                 earum quis minus commodi dignissimos aliquid reprehenderit,
               </p>
               <div>
-                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0 duration-100 ">
+                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0">
                   learn more
                   <i>
                     <BiRightArrowAlt className="h-5 w-5" />
@@ -45,7 +78,7 @@ const SectionTwo = () => {
                 earum quis minus commodi dignissimos aliquid reprehenderit,
               </p>
               <div>
-                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0 duration-100 ">
+                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0">
                   learn more
                   <i>
                     <BiRightArrowAlt className="h-5 w-5" />
@@ -67,7 +100,7 @@ const SectionTwo = () => {
                 earum quis minus commodi dignissimos aliquid reprehenderit,
               </p>
               <div>
-                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0 duration-100 ">
+                <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0">
                   learn more
                   <i>
                     <BiRightArrowAlt className="h-5 w-5" />
@@ -80,7 +113,7 @@ const SectionTwo = () => {
                 3
               </h3>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
