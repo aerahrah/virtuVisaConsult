@@ -1,36 +1,14 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-
+import {
+  slideDownAnim,
+  slideUpAnim,
+  slideRTLAnim,
+} from "../animation/animation";
 const SectionOne = () => {
   const [ref, inView] = useInView();
   const [ref2, inView2] = useInView();
   const [ref3, inView3] = useInView();
-
-  const descAnim = {
-    hidden: { opacity: 0, y: -150 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
-  const btnAnim = {
-    hidden: { opacity: 0, y: 150 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-  const imgAnim = {
-    hidden: { opacity: 0, x: 150 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6 },
-    },
-  };
 
   return (
     <div className="bg-neutral-100 px-16 text-neutral-800">
@@ -42,7 +20,7 @@ const SectionOne = () => {
               ref={ref}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              variants={descAnim}
+              variants={slideDownAnim(0)}
             >
               <h1 className="text-7xl font-black">
                 We Provide Visa Consulting Services
@@ -59,7 +37,7 @@ const SectionOne = () => {
               ref={ref2}
               initial="hidden"
               animate={inView2 ? "visible" : "hidden"}
-              variants={btnAnim}
+              variants={slideUpAnim(0)}
             >
               <button className=" transition transform block py-3 px-16 rounded-full border-2 border-blue-500 hover:bg-blue-500  hover:outline-0 font-semibold uppercase duration-100 hover:scale-[1.02] hover:shadow-lg hover:text-blue-50">
                 Book free consultation
@@ -71,7 +49,7 @@ const SectionOne = () => {
             ref={ref3}
             initial="hidden"
             animate={inView3 ? "visible" : "hidden"}
-            variants={imgAnim}
+            variants={slideRTLAnim(0)}
           >
             <div className="h-96 w-96 bg-neutral-300"></div>
           </motion.div>
