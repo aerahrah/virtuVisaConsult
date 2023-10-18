@@ -19,7 +19,7 @@ const SectionTwo = () => {
           >
             {console.log(inView)}
             <h3 className="text-lg font-bold text-blue-500">Working Process</h3>
-            <h1 className="text-5xl font-bold">How It Work</h1>
+            <h1 className="text-5xl font-bold capitalize">our services</h1>
             <p className="max-w-[50%] text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.

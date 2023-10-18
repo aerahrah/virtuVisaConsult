@@ -4,7 +4,7 @@ export const slideUpAnim = (delay) => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.75, delay: delay },
     },
   };
 };
@@ -15,7 +15,7 @@ export const slideRTLAnim = (delay) => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.75, delay: delay },
     },
   };
 };
@@ -26,7 +26,7 @@ export const slideLTRAnim = (delay) => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.75, delay: delay },
     },
   };
 };
@@ -37,7 +37,7 @@ export const scaleAnim = (delay) => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.75, delay: delay },
     },
   };
 };

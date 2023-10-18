@@ -10,6 +10,10 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bg-neutral-900 py-24 px-16 text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">
@@ -37,20 +41,28 @@ const Footer = () => {
             <ul className="capitalize flex flex-col gap-2 ">
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
                 <BiCaretRight className="text-blue-500" />
-                <Link to="/">home</Link>
+                <Link to="/" onClick={scrollToTop}>
+                  home
+                </Link>
               </li>
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
                 <BiCaretRight className="text-blue-500" />
-                <Link to="/about">About us</Link>
+                <Link to="/about" onClick={scrollToTop}>
+                  About us
+                </Link>
               </li>
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
                 <BiCaretRight className="text-blue-500" />
-                <Link to="/services"> services</Link>
+                <Link to="/services" onClick={scrollToTop}>
+                  services
+                </Link>
               </li>
 
               <li className="flex gap-1 items-center cursor-pointer duration-100 hover:text-blue-500 hover:translate-x-[2px]">
                 <BiCaretRight className="text-blue-500" />
-                <Link to="/contact">contact</Link>
+                <Link to="/contact" onClick={scrollToTop}>
+                  contact
+                </Link>
               </li>
             </ul>
           </div>
