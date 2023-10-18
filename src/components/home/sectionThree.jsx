@@ -6,9 +6,9 @@ import {
   slideRTLAnim,
 } from "../animation/animation";
 const SectionThree = () => {
-  const [ref, inView] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const [ref2, inView2] = useInView({ triggerOnce: true });
+  const [ref3, inView3] = useInView({ triggerOnce: true });
 
   return (
     <div className="bg-neutral-100 px-16 text-neutral-800">

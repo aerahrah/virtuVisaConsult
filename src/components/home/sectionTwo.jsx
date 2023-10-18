@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { slideDownAnim, slideUpAnim } from "../animation/animation";
 const SectionTwo = () => {
-  const [ref, inView] = useInView();
-  const [ref2, inView2] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const [ref2, inView2] = useInView({ triggerOnce: true });
 
   return (
     <div className="min-h-screen bg-neutral-900 py-24 px-16    text-neutral-300  overflow-hidden">

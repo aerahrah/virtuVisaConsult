@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const AboutOne = () => {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
   return (
     <div className="bg-neutral-100 px-16 text-neutral-800">
       <div className="h-full pt-24 py-16 w-full max-w-[1164px] mx-auto flex flex-col gap-16">
