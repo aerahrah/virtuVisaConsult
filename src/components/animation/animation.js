@@ -53,3 +53,14 @@ export const slideDownAnim = (delay) => {
     },
   };
 };
+
+export const slideDownNavAnim = () => {
+  return {
+    hidden: { y: -300 },
+    visible: {
+      y: 0,
+
+      transition: { duration: 0.2 },
+    },
+  };
+};

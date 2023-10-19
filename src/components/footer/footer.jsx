@@ -48,7 +48,7 @@ const Footer = () => {
   return (
     <div className="bg-neutral-900 py-24 px-16 text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">
-        <div className="flex justify-between gap-6 w-full">
+        <div className="flex flex-wrap justify-between gap-6 w-full">
           <div className="max-w-[30%] flex flex-col gap-4 transition transform">
             <h3 className="text-2xl font-bold capitalize">about us</h3>
             <p>
