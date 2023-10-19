@@ -7,13 +7,10 @@ import {
   BiMailSend,
   BiSolidMap,
 } from "react-icons/bi";
+import { scrollToTop } from "../utils/scrollToTop";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="bg-neutral-900 py-24 px-16 text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">

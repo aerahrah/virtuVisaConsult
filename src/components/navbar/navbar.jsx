@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 
 const NavBar = () => {
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="w-full flex justify-between py-4 bg-blue-600 fixed shadow-md z-50">
       <div className="flex justify-between w-full max-w-[960px] mx-auto">
