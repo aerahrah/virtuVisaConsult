@@ -8,9 +8,9 @@ const SectionTwo = () => {
   const [ref2, inView2] = useInView({ triggerOnce: true });
 
   const servicesItems = [
-    { icon: "hello", title: "Business Thought", delaySpeed: 0.3 },
-    { icon: "hello1", title: "Business Thought", delaySpeed: 0.6 },
-    { icon: "hello3", title: "Business Thought", delaySpeed: 0.9 },
+    { icon: "hello", title: "Business Thought" },
+    { icon: "hello1", title: "Business Thought" },
+    { icon: "hello3", title: "Business Thought" },
   ];
   return (
     <div className="min-h-screen bg-neutral-900 py-24 px-16    text-neutral-300  overflow-hidden">
@@ -32,13 +32,14 @@ const SectionTwo = () => {
             </p>
           </motion.div>
           <motion.div className="flex gap-8 h-full" ref={ref2}>
-            {servicesItems.map(({ icon, title, delaySpeed }) => {
+            {servicesItems.map(({ icon, title }, idx) => {
               return (
                 <motion.div
+                  key={idx}
                   className="relative overflow-hidden flex flex-col gap-4 bg-neutral-800 p-6 pt-10 justify-start shadow-md rounded hover:outline outline-[1px] outline-blue-500 w-full"
                   initial="hidden"
                   animate={inView2 ? "visible" : "hidden"}
-                  variants={slideUpAnim(delaySpeed)}
+                  variants={slideUpAnim(0.3 * (idx + 1))}
                 >
                   <i>{icon}</i>
                   <h3 className="text-2xl font-bold capitalize">{title}</h3>

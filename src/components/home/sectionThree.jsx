@@ -10,6 +10,24 @@ const SectionThree = () => {
   const [ref2, inView2] = useInView({ triggerOnce: true });
   const [ref3, inView3] = useInView({ triggerOnce: true });
 
+  const steps = [
+    {
+      title: "Planning the moves",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+    {
+      title: "Execute the decision",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+    {
+      title: "Analyze the results",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+  ];
+
   return (
     <div className="bg-neutral-100 px-16 text-neutral-800">
       <div className="min-h-screen py-24 w-full max-w-[1164px] mx-auto overflow-hidden">
@@ -32,65 +50,27 @@ const SectionThree = () => {
                 consequuntur? Nihil et culpa earum dignissimos!
               </p>
             </motion.div>
-            <motion.div className="flex flex-col gap-6" ref={ref2}>
-              <motion.div
-                className="flex gap-4"
-                initial="hidden"
-                animate={inView2 ? "visible" : "hidden"}
-                variants={slideUpAnim(0.3)}
-              >
-                <div>
-                  <p className="bg-blue-300 ronded-lg h-24 w-24 rounded-md"></p>
-                </div>
-                <div className="flex flex-col justify-between">
-                  <h3 className="text-2xl font-bold capitalize tracking-tight">
-                    Planning the moves
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div
-                className="flex gap-4"
-                initial="hidden"
-                animate={inView2 ? "visible" : "hidden"}
-                variants={slideUpAnim(0.6)}
-              >
-                <div>
-                  <p className="bg-blue-300 ronded-lg h-24 w-24 rounded-md"></p>
-                </div>
-                <div className="flex flex-col justify-between">
-                  <h3 className="text-2xl font-bold capitalize tracking-tight">
-                    Execute the decision
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div
-                className="flex gap-4"
-                initial="hidden"
-                animate={inView2 ? "visible" : "hidden"}
-                variants={slideUpAnim(0.9)}
-              >
-                <div>
-                  <p className="bg-blue-300 ronded-lg h-24 w-24 rounded-md"></p>
-                </div>
-                <div className="flex flex-col justify-between">
-                  <h3 className="text-2xl font-bold capitalize tracking-tight">
-                    analyze the results
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
+            <div className="flex flex-col gap-6" ref={ref2}>
+              {steps.map(({ title, content }, idx) => (
+                <motion.div
+                  key={idx}
+                  className="flex gap-4"
+                  initial="hidden"
+                  animate={inView2 ? "visible" : "hidden"}
+                  variants={slideUpAnim(0.3 * (idx + 1))}
+                >
+                  <div>
+                    <p className="bg-blue-300 ronded-lg h-24 w-24 rounded-md"></p>
+                  </div>
+                  <div className="flex flex-col justify-between">
+                    <h3 className="text-2xl font-bold capitalize tracking-tight">
+                      {title}
+                    </h3>
+                    <p>{content}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
           <div className="relative h-full w-[50%]" ref={ref3}>
             <motion.div
