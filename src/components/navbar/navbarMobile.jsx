@@ -29,7 +29,7 @@ const NavbarMobile = ({ openNav, setOpenNav }) => {
                     <Link
                       key={idx}
                       to={link}
-                      className="text-blue-100 capitalize px-16"
+                      className="text-blue-100 capitalize  px-6 md:px-12 lg:px-16"
                       onClick={scrollToTop}
                     >
                       {content}

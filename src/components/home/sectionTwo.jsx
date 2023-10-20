@@ -13,9 +13,9 @@ const SectionTwo = () => {
     { icon: "hello3", title: "Business Thought" },
   ];
   return (
-    <div className="min-h-screen bg-neutral-900 py-24 px-16    text-neutral-300  overflow-hidden">
+    <div className="bg-neutral-900 py-16 md:py-24 px-6 md:px-12 lg:px-16 text-neutral-300 overflow-hidden">
       <div className="w-full max-w-[1164px] mx-auto h-full">
-        <div className="flex flex-col gap-20 ">
+        <div className="flex flex-col gap-12 lg:gap-16 ">
           <motion.div
             className="flex flex-col gap-4 items-center"
             ref={ref}
@@ -25,18 +25,23 @@ const SectionTwo = () => {
           >
             {console.log(inView)}
             <h3 className="text-lg font-bold text-blue-500">Working Process</h3>
-            <h1 className="text-5xl font-bold capitalize">our services</h1>
-            <p className="max-w-[50%] text-center">
+            <h1 className="text-4xl md:text-5xl font-bold capitalize">
+              our services
+            </h1>
+            <p className="max-w-[32em] text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
           </motion.div>
-          <motion.div className="flex gap-8 h-full" ref={ref2}>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 h-full"
+            ref={ref2}
+          >
             {servicesItems.map(({ icon, title }, idx) => {
               return (
                 <motion.div
                   key={idx}
-                  className="relative overflow-hidden flex flex-col gap-4 bg-neutral-800 p-6 pt-10 justify-start shadow-md rounded hover:outline outline-[1px] outline-blue-500 w-full"
+                  className="relative overflow-hidden flex flex-col gap-4 bg-neutral-800 p-6 pt-10 justify-start shadow-md rounded hover:outline outline-[1px] outline-blue-500 w-full "
                   initial="hidden"
                   animate={inView2 ? "visible" : "hidden"}
                   variants={slideUpAnim(0.3 * (idx + 1))}

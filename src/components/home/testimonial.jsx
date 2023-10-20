@@ -44,15 +44,15 @@ const Testimonial = () => {
           {slides.map((img, index) => (
             <div className="w-full" key={index}>
               <div className="w-[100vw] max-w-[100%]">
-                <div className="relative  min-h-64 bg-white   shadow-lg border-[1px] border-neutral-200 rounded-lg w-[80vw] max-w-[70%] ml-[14vw] mx-auto">
-                  <div className="absolute top-1/2 -translate-y-1/2 left-[-5rem] z-50">
+                <div className="relative  min-h-64 bg-white   shadow-lg border-[1px] border-neutral-200 rounded-lg w-[100vw]  max-w-[90%] md:max-w-[70%] md:ml-[14vw] mx-auto">
+                  <div className="hidden md:block w-full md:absolute md:top-1/2 md:-translate-y-1/2 md:left-[-5rem] z-50">
                     <img
-                      className="w-40 h-40 rounded-full"
+                      className="mx-auto md:mx-0 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full"
                       src={img}
                       alt={`Slide ${index}`}
                     />
                   </div>
-                  <div className="p-16 pl-24 flex flex-col justify-between h-full gap-4">
+                  <div className="p-6 md:p-12 md:pl-16 lg:p-16 lg:pl-24 flex flex-col justify-between h-full gap-4 text-justify">
                     <p>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Quisquam architecto odio necessitatibus aliquid quod
@@ -68,7 +68,7 @@ const Testimonial = () => {
           ))}
         </div>
 
-        <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-4 text-3xl">
+        <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-2 md:px-4 text-3xl">
           <button className="border-[1px] rounded-full" onClick={previousSlide}>
             <BsFillArrowLeftCircleFill className="text-neutral-800" />
           </button>

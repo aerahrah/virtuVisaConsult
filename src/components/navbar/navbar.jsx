@@ -11,9 +11,9 @@ const NavBar = () => {
     return setOpenNav(!openNav);
   };
   return (
-    <div className=" w-full px-16 bg-blue-600 fixed md:shadow-md z-30 ">
+    <div className=" w-full px-6 md:px-12 lg:px-16 bg-blue-600 fixed md:shadow-md z-30 ">
       <div className="relative bg-blue-600 h-full  py-4">
-        <div className="flex justify-between w-full  mx-auto items-center max-w-[960px]">
+        <div className="flex justify-between w-full  mx-auto items-center max-w-[1164px]">
           <h1>logo</h1>
           <div className="hidden md:block">
             <div className="flex gap-4 text-blue-50 transition">

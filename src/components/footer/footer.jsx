@@ -46,10 +46,13 @@ const socialMediaIcons = [
 
 const Footer = () => {
   return (
-    <div className="bg-neutral-900 py-24 px-16 text-neutral-300">
+    <div className="bg-neutral-900 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-16 text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">
-        <div className="flex flex-wrap justify-between gap-6 w-full">
-          <div className="max-w-[30%] flex flex-col gap-4 transition transform">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-8 w-full">
+          <div>
+            <div className="w-48 h-48  bg-blue-500"></div>
+          </div>
+          <div className="flex flex-col gap-4 transition transform">
             <h3 className="text-2xl font-bold capitalize">about us</h3>
             <p>
               tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -68,7 +71,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="max-w-[30%] flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold capitalize">quick link</h3>
             <ul className="capitalize flex flex-col gap-2 ">
               {navItems.map(({ link, content }, idx) => {
@@ -86,7 +89,7 @@ const Footer = () => {
               })}
             </ul>
           </div>
-          <div className="max-w-[30%] flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold capitalize">Contact us</h3>
             <ul className=" flex flex-col gap-2">
               <li className="flex gap-1 items-center cursor-pointer hover:text-blue-500">
