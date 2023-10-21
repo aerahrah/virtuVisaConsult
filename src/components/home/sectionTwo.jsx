@@ -28,13 +28,13 @@ const SectionTwo = () => {
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our services
             </h1>
-            <p className="max-w-[32em] text-center">
+            <p className="max-w-[32rem] text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
           </motion.div>
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 h-full"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 h-full"
             ref={ref2}
           >
             {servicesItems.map(({ icon, title }, idx) => {

@@ -19,7 +19,7 @@ const SectionOne = () => {
               animate={inView ? "visible" : "hidden"}
               variants={slideUpAnim(0.3)}
             >
-              <h1 className="text-4xl md:text-5xl text-center md:text-start lg:text-7xl font-black ">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl  text-center md:text-start xl:text-7xl font-black ">
                 We Provide Visa Consulting Services
               </h1>
               <p className="text-justify md:text-start">

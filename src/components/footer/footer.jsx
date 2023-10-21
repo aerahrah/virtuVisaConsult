@@ -48,7 +48,7 @@ const Footer = () => {
   return (
     <div className="bg-neutral-900 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-16 text-neutral-300">
       <div className="w-full max-w-[1164px] mx-auto h-full">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-8 w-full">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-8 md:gap-10 w-full">
           <div>
             <div className="w-48 h-48  bg-blue-500"></div>
           </div>
