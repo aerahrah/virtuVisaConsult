@@ -47,19 +47,22 @@ const ServicesOne = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-100 py-24 px-16    text-neutral-800  overflow-hidden">
+    <div className="min-h-screen bg-neutral-100 !pt-24 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-16 text-neutral-800  overflow-hidden">
       <div className="w-full max-w-[1164px] mx-auto h-full">
-        <div className="flex flex-col gap-16 ">
+        <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 ">
           <motion.div className="flex flex-col gap-4 items-center" ref={ref}>
-            <h1 className="text-5xl font-black capitalize">
+            <h1 className="text-4xl md:text-5xl font-black capitalize text-center ">
               our services and How It Work
             </h1>
-            <p className="max-w-[50%] text-center">
+            <p className="max-w-[40rem] text-justify">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
           </motion.div>
-          <motion.div className="grid grid-cols-3 gap-8 h-full" ref={ref2}>
+          <motion.div
+            className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 h-full"
+            ref={ref2}
+          >
             {servicesItems.map(({ icon, title, description }, idx) => {
               return (
                 <motion.div

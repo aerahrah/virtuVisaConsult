@@ -34,7 +34,7 @@ const SectionTwo = () => {
             </p>
           </motion.div>
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 h-full"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 h-full"
             ref={ref2}
           >
             {servicesItems.map(({ icon, title }, idx) => {
