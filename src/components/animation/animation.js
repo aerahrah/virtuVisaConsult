@@ -31,13 +31,13 @@ export const slideLTRAnim = (delay) => {
   };
 };
 
-export const scaleAnim = (delay) => {
+export const scaleAnim = (delay, duration) => {
   return {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.75, delay: delay },
+      transition: { duration: duration, delay: delay },
     },
   };
 };

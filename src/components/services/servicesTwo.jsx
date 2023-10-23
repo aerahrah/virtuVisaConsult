@@ -80,12 +80,7 @@ const ServicesTwo = () => {
                       : " "
                   }`}
                 >
-                  <div
-                    className={`bg-neutral-800 p-6 rounded-lg ${
-                      idx === 2 ? "" : " "
-                    }`}
-                    key={idx}
-                  >
+                  <div className={`bg-neutral-800 p-6 rounded-lg`} key={idx}>
                     <div className="mb-10 text-center">
                       <h3 className="uppercase text-xl font-bold mb-1 text-blue-500">
                         {name}
