@@ -34,7 +34,7 @@ const ContactDetails = () => {
             <h3 className="text-2xl capitalize font-bold tracking-tight text-blue-500">
               contact us
             </h3>
-            <h1 className="text-5xl font-extrabold max-w-[40rem] mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold max-w-[40rem] mx-auto">
               Needs help? let's get in touch
             </h1>
           </div>
@@ -48,16 +48,16 @@ const ContactDetails = () => {
               {contactInfo.map(({ icon, title, content }, idx) => (
                 <li
                   key={idx}
-                  className="flex gap-6 items-center bg-white w-full p-6 rounded-lg shadow border-[1px]"
+                  className="flex gap-6 items-center bg-white w-full p-4 md:p-6 rounded-lg shadow border-[1px]"
                 >
-                  <i className="bg-blue-500 rounded-full p-2.5 shadow-lg">
+                  <i className="bg-blue-500 rounded-full p-2 md:p-2.5 shadow-lg">
                     {icon}
                   </i>
                   <div className="flex flex-col gap-1">
-                    <h5 className="text-2xl font-bold capitalize tracking-tight">
+                    <h5 className="text-xl md:text-2xl font-bold capitalize tracking-tight">
                       {title}
                     </h5>
-                    <p className="text-lg">{content}</p>
+                    <p className="md:text-lg">{content}</p>
                   </div>
                 </li>
               ))}

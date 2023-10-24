@@ -1,9 +1,7 @@
-import { slideLTRAnim, scaleAnim } from "../animation/animation";
+import { slideLTRAnim, scaleAnim, slideUpAnim } from "../animation/animation";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
-const AboutOne = () => {
-  const [ref, inView] = useInView({ triggerOnce: true });
+const AboutOne = ({ isDesktop }) => {
   return (
     <div className="bg-neutral-100 px-6 md:px-12 lg:px-16 text-neutral-800">
       <div className="h-full py-12 lg:py-16 !pt-24  w-full max-w-[1164px] mx-auto flex flex-col gap-8 md:gap-12 lg:gap-16">
@@ -18,16 +16,14 @@ const AboutOne = () => {
             quis perspiciatis! Harum voluptate iure saepe.
           </p>
         </div>
-        <div
-          className=" h-full flex flex-col-reverse md:flex-row md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16"
-          ref={ref}
-        >
+        <div className=" h-full flex flex-col-reverse md:flex-row md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
           <div className="max-w-[40rem]">
             <motion.div
               className="flex flex-col gap-2"
               initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={slideLTRAnim(0)}
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={isDesktop ? slideLTRAnim(0) : slideUpAnim(0.3)}
             >
               <h3 className="text-xl font-semibold capitalize mb-2 md:mb-4 lg:mb-6 text-center  md:text-start">
                 <span className="bg-blue-500 px-4 py-2 rounded-full text-blue-100 ">
@@ -47,8 +43,9 @@ const AboutOne = () => {
           </div>
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={scaleAnim(0)}
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={isDesktop ? scaleAnim(0, 0.75) : slideUpAnim(0)}
           >
             <div className="h-96 w-96 bg-neutral-300"></div>
           </motion.div>

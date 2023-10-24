@@ -38,7 +38,7 @@ const ContactForm = () => {
               <h3 className="text-2xl capitalize font-bold tracking-tight text-blue-500">
                 Get In Touch
               </h3>
-              <h1 className="text-5xl font-extrabold max-w-[40rem] mx-auto">
+              <h1 className="text-4xl md:text-5xl font-extrabold max-w-[40rem] mx-auto">
                 Feel free to contact with us any time.
               </h1>
             </div>

@@ -1,11 +1,8 @@
 import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { slideDownAnim, slideUpAnim } from "../animation/animation";
 import { BiCheckCircle } from "react-icons/bi";
 const ServicesTwo = () => {
-  const [ref, inView] = useInView({ triggerOnce: true });
-  const [ref2, inView2] = useInView({ triggerOnce: true });
   const planItems = [
     {
       name: "hello",
@@ -53,12 +50,11 @@ const ServicesTwo = () => {
         <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 ">
           <motion.div
             className="flex flex-col gap-4 items-center"
-            ref={ref}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={slideDownAnim(0.3)}
           >
-            {console.log(inView)}
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our packages
             </h1>
@@ -67,10 +63,7 @@ const ServicesTwo = () => {
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
           </motion.div>
-          <motion.div
-            className="grid grid-cols md:grid-cols-2  lg:grid-cols-3 gap-8 h-full w-full mx-auto justify-items-center"
-            ref={ref2}
-          >
+          <motion.div className="grid grid-cols md:grid-cols-2  lg:grid-cols-3 gap-8 h-full w-full mx-auto justify-items-center">
             {planItems.map(({ name, description, price, services }, idx) => {
               return (
                 <div
