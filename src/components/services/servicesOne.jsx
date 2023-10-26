@@ -6,13 +6,19 @@ const ServicesOne = ({ isDesktop }) => {
   const servicesItems = [
     {
       icon: "hello",
-      title: "Business Thought",
+      title: "Individual evaluation",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
     },
     {
       icon: "hello",
-      title: "Business Thought",
+      title: "documents preparation and review",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
+    },
+    {
+      icon: "hello",
+      title: "application creation and form assistance",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
@@ -24,19 +30,13 @@ const ServicesOne = ({ isDesktop }) => {
     },
     {
       icon: "hello",
-      title: "Business Thought",
+      title: "application submission",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
     {
       icon: "hello",
-      title: "Business Thought",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
-    },
-    {
-      icon: "hello",
-      title: "Business Thought",
+      title: "application tracking and account updates",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
     },
@@ -72,7 +72,7 @@ const ServicesOne = ({ isDesktop }) => {
                 >
                   <i>{icon}</i>
                   <h3 className="text-2xl font-bold capitalize">{title}</h3>
-                  <p className="w-[80%]">{description}</p>
+                  <p className="">{description}</p>
 
                   <i className="absolute top-[-3rem] right-[-1rem] h-24 w-24 bg-blue-400 opacity-50 rounded-full"></i>
                   <i className="absolute top-[-1rem] right-[-3rem] h-24 w-24  bg-blue-600 opacity-50 rounded-full"></i>

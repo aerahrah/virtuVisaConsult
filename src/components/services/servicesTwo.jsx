@@ -5,8 +5,8 @@ import { BiCheckCircle } from "react-icons/bi";
 const ServicesTwo = () => {
   const planItems = [
     {
-      name: "hello",
-      price: "5000",
+      name: "free consultation plan",
+      price: "free",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
       services: [
@@ -18,7 +18,7 @@ const ServicesTwo = () => {
       ],
     },
     {
-      name: "hello",
+      name: "single application plan",
       price: "10000",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
@@ -28,10 +28,12 @@ const ServicesTwo = () => {
         "Document Collection & Verification",
         "School Application Submission And Monitoring",
         "Two (2) Complimentary Consultations",
+        "Two (2) Complimentary Consultations",
+        "Two (2) Complimentary Consultations",
       ],
     },
     {
-      name: "hello",
+      name: "group application plan",
       price: "15000",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",

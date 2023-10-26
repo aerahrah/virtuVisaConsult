@@ -16,17 +16,18 @@ const AboutThree = ({ isDesktop }) => {
             >
               <h3 className="text-xl font-semibold capitalize mb-2 md:mb-4 lg:mb-6 text-center  md:text-start">
                 <span className="bg-blue-500 px-4 py-2 rounded-full text-blue-100 ">
-                  Our mission
+                  Our expertise
                 </span>
               </h3>
               <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center md:text-start">
-                We Provide Visa Consulting Services
+                Your Passport to Memorable Moments
               </h1>
               <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-                maxime iure quod hic consectetur esse tempore nihil aliquam
-                quae, beatae saepe necessitatibus harum quos modi ad amet
-                incidunt velit eos!
+                We excel in visitor visas, ensuring seamless journeys for your
+                vacations, family reunions, and explorations. Our expertise lies
+                in simplifying the application process, providing expert
+                guidance, and offering tailored support for your specific
+                visitor visa needs.
               </p>
             </motion.div>
           </div>

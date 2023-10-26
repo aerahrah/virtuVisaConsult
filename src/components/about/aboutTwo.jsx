@@ -20,13 +20,16 @@ const AboutTwo = ({ isDesktop }) => {
                 </span>
               </h3>
               <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center md:text-start">
-                We Provide Visa Consulting Services
+                Your Visa Application Journey with Us
               </h1>
               <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-                maxime iure quod hic consectetur esse tempore nihil aliquam
-                quae, beatae saepe necessitatibus harum quos modi ad amet
-                incidunt velit eos!
+                We aspire to be your trusted partner in navigating the
+                intricacies of visa applications. Our commitment is to provide
+                comprehensive guidance, top-notch support, and up-to-date
+                information to ensure a smooth and successful visa application
+                journey for our clients. Our aim is to eliminate the stress and
+                uncertainty often associated with the process and replace it
+                with confidence and peace of mind.
               </p>
             </motion.div>
           </div>

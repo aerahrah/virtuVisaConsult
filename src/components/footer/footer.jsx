@@ -6,6 +6,7 @@ import {
   BiSolidPhone,
   BiMailSend,
   BiSolidMap,
+  BiLogoTiktok,
 } from "react-icons/bi";
 import { scrollToTop } from "../utils/scrollToTop";
 import { Link } from "react-router-dom";
@@ -42,6 +43,10 @@ const socialMediaIcons = [
     icon: <BiLogoInstagram className="h-8 w-8" />,
     link: "https://www.instagram.com",
   },
+  {
+    icon: <BiLogoTiktok className="h-8 w-8" />,
+    link: "https://www.instagram.com",
+  },
 ];
 
 const Footer = () => {
@@ -55,8 +60,8 @@ const Footer = () => {
           <div className="flex flex-col gap-4 transition transform">
             <h3 className="text-2xl font-bold capitalize">about us</h3>
             <p>
-              tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua.
+              Your trusted visa and immigration partners. Simplifying your
+              journey to explore new horizons.
             </p>
             <ul className="flex gap-4">
               {socialMediaIcons.map(({ icon, link }, idx) => (
@@ -93,16 +98,28 @@ const Footer = () => {
             <h3 className="text-2xl font-bold capitalize">Contact us</h3>
             <ul className=" flex flex-col gap-2">
               <li className="flex gap-1 items-center cursor-pointer hover:text-blue-500">
-                <BiSolidPhone />
-                09175031119
+                <i>
+                  <BiSolidPhone />
+                </i>
+                <div>(+63) 917-503-1119 or</div>
               </li>
               <li className="flex gap-1 items-center cursor-pointer hover:text-blue-500">
-                <BiMailSend className="inline-block" />
+                <i>
+                  <BiSolidPhone />
+                </i>
+                <div>
+                  <p>(+63) 976-095-0232</p>
+                </div>
+              </li>
+              <li className="flex gap-1 items-center cursor-pointer hover:text-blue-500">
+                <i>
+                  <BiMailSend />
+                </i>
                 virtuvisaconsult@gmail.com
               </li>
               <li className="cursor-pointer duration-100 hover:text-blue-500">
                 <BiSolidMap className="inline" />
-                1700 W Blancke St, kiyev port south USA, America
+                San mateo, Isabela, 3318 Philippines
               </li>
             </ul>
           </div>

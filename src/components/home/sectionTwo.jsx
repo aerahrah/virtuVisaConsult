@@ -2,11 +2,16 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { slideDownAnim, slideUpAnim } from "../animation/animation";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
+import { FaRegRectangleList } from "react-icons/fa6";
 const SectionTwo = ({ isDesktop }) => {
   const servicesItems = [
-    { icon: "hello", title: "Business Thought" },
-    { icon: "hello1", title: "Business Thought" },
-    { icon: "hello3", title: "Business Thought" },
+    {
+      icon: <FaRegRectangleList className="h-20 w-20 " />,
+      title: "Visa elibility assessment",
+    },
+    { icon: "hello1", title: "application Process and submission assistance" },
+    { icon: "hello3", title: "application tracking and updates" },
   ];
 
   return (
@@ -14,19 +19,20 @@ const SectionTwo = ({ isDesktop }) => {
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="flex flex-col gap-12 lg:gap-16 ">
           <motion.div
-            className="flex flex-col gap-4 items-center"
+            className="flex flex-col gap-6 items-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={slideDownAnim(0.3)}
           >
-            <h3 className="text-lg font-bold text-blue-500">Working Process</h3>
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our services
             </h1>
-            <p className="max-w-[32rem] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-              unde incidunt, est quod alias recusandae totam repellendus.
+            <p className="max-w-[40rem] text-justify">
+              We offer a comprehensive range of services tailored to meet your
+              diverse visa and immigration needs. Our commitment is to simplify
+              your journey by providing expert guidance, top-notch support, and
+              the latest information for visitor visa.
             </p>
           </motion.div>
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 h-full">
@@ -47,7 +53,7 @@ const SectionTwo = ({ isDesktop }) => {
                   <i>{icon}</i>
                   <h3 className="text-2xl font-bold capitalize">{title}</h3>
 
-                  <Link to="/services">
+                  <Link to="/services" onClick={scrollToTop}>
                     <button className="capitalize font-semibold outline-b-[4px] flex gap-1 items-center hover:underline underline-0 hover:text-blue-400 hover:underline-offset-4 underline-offset-0">
                       learn more
                       <i>

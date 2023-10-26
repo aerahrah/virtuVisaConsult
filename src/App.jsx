@@ -9,7 +9,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden  tracking-wide">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

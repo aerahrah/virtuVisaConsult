@@ -10,10 +10,11 @@ const AboutOne = ({ isDesktop }) => {
             About our company
           </h1>
           <p className="max-w-[40rem] mx-auto text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            ea voluptate tempore assumenda esse, quisquam sunt provident magnam
-            laudantium consequuntur repudiandae praesentium debitis, tempora
-            quis perspiciatis! Harum voluptate iure saepe.
+            Discover who we are, what we stand for, and our commitment to
+            helping you achieve your visa and immigration goals. At{" "}
+            <span className="text-lg font-bold">VirtuVisaConsult</span>, we're
+            dedicated to simplifying the process and making your international
+            dreams a reality.
           </p>
         </div>
         <div className=" h-full flex flex-col-reverse md:flex-row md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
@@ -31,13 +32,16 @@ const AboutOne = ({ isDesktop }) => {
                 </span>
               </h3>
               <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center md:text-start">
-                We Provide Visa Consulting Services
+                At VirtuVisaConsult
               </h1>
               <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-                maxime iure quod hic consectetur esse tempore nihil aliquam
-                quae, beatae saepe necessitatibus harum quos modi ad amet
-                incidunt velit eos!
+                We envision a digital platform that fosters transparency, ease
+                of use, and above all, the assurance that your visa application
+                process is in the safest hands. We are committed to standing as
+                a fortress against scams and fraudulent practices, setting new
+                standards for the industry. Our vision is to become a beacon of
+                trust and reliability in the realm of visa application
+                consultancy.
               </p>
             </motion.div>
           </div>
