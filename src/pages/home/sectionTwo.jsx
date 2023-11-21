@@ -1,8 +1,8 @@
 import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { slideDownAnim, slideUpAnim } from "../animation/animation";
+import { slideDownAnim, slideUpAnim } from "../../utils/animation";
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../../utils/scrollToTop";
 import { FaRegRectangleList } from "react-icons/fa6";
 const SectionTwo = ({ isDesktop }) => {
   const servicesItems = [

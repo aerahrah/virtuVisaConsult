@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { navItems } from "./navbarContent";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../../utils/scrollToTop";
 import { motion, AnimatePresence } from "framer-motion";
-import { slideDownNavAnim } from "../animation/animation";
+import { slideDownNavAnim } from "../../utils/animation";
 import { Dialog } from "@headlessui/react";
 const NavbarMobile = ({ openNav, setOpenNav }) => {
   console.log(openNav);

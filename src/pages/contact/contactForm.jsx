@@ -1,7 +1,7 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { scaleAnim } from "../../utils/animation";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { AnimatePresence, motion } from "framer-motion";
-import { scaleAnim } from "../animation/animation";
 
 const ContactForm = () => {
   const PUBLIC_KEY = "W0_1f7BwrmtsMtjAx";

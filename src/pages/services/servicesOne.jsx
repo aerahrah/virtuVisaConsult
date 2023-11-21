@@ -1,7 +1,6 @@
 import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { slideDownAnim, slideUpAnim } from "../animation/animation";
-
+import { slideDownAnim, slideUpAnim } from "../../utils/animation";
 const ServicesOne = ({ isDesktop }) => {
   const servicesItems = [
     {

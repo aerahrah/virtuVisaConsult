@@ -3,16 +3,16 @@ import {
   slideDownAnim,
   slideUpAnim,
   slideRTLAnim,
-} from "../animation/animation";
+} from "../../utils/animation";
 const SectionThree = ({ isDesktop }) => {
   const steps = [
     {
-      title: "Planning the moves",
+      title: "transparency",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
     },
     {
-      title: "Execute the decision",
+      title: "full assistance",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
     },
@@ -24,12 +24,12 @@ const SectionThree = ({ isDesktop }) => {
   ];
 
   return (
-    <div className="bg-neutral-100 px-16 text-neutral-800">
-      <div className="min-h-screen py-24 w-full max-w-[1164px] mx-auto overflow-hidden">
-        <div className=" h-full flex items-center gap-6">
-          <div className="flex flex-col gap-14 w-[50%]">
+    <div className="bg-neutral-100 px-6 md:px-12 lg:px-16 text-neutral-800">
+      <div className="min-h-screen py-16 md:py-24 w-full max-w-[1164px] mx-auto overflow-hidden">
+        <div className=" h-full grid lg:grid-cols-2 items-center gap-6">
+          <div className="flex flex-col gap-14 ">
             <motion.div
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -38,7 +38,7 @@ const SectionThree = ({ isDesktop }) => {
               <h1 className="text-5xl font-extrabold capitalize">
                 Why choose us
               </h1>
-              <p>
+              <p className="max-w-[40rem] text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptates enim labore nostrum eligendi, explicabo quo obcaecati
                 illum perferendis quibusdam eum dicta, distinctio, quod autem
@@ -72,23 +72,25 @@ const SectionThree = ({ isDesktop }) => {
               ))}
             </div>
           </div>
-          <div className="relative h-full w-[50%]">
+          <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-4 justify-items-center  h-full w-full p-2">
             <motion.div
-              className="absolute top-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 shadow-md rounded-lg hover:shadow-lg"
+              className="min-h-[300px] lg:h-auto max-w-full w-full bg-neutral-300 outline outline-blue-300 max-w-64 max-h-64 shadow-md rounded-lg hover:shadow-lg"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={slideRTLAnim(0.9)}
             ></motion.div>
             <motion.div
-              className="absolute top-[-5rem] right-6 h-64 w-64 bg-neutral-300  outline outline-blue-300 shadow-md rounded-lg hover:shadow-lg"
+              className="min-h-[300px] sm:row-span-full self-center	sm:col-end-3 max-w-64 max-h-64 w-full h-full bg-neutral-300  outline outline-blue-300 shadow-md rounded-lg hover:shadow-lg"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={slideRTLAnim(0.6)}
-            ></motion.div>
+            >
+              <div></div>
+            </motion.div>
             <motion.div
-              className="absolute bottom-6 h-64 w-64 bg-neutral-300 outline outline-blue-300 shadow-md rounded-lg  hover:shadow-lg"
+              className="min-h-[300px] lg:h-auto max-w-full w-full bg-neutral-300 outline outline-blue-300 max-w-64 max-h-64 shadow-md rounded-lg  hover:shadow-lg"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

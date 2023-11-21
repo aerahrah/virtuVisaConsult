@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../../utils/scrollToTop";
 import { BiMenu } from "react-icons/bi";
 import { useState } from "react";
 import { navItems } from "./navbarContent";

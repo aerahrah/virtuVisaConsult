@@ -4,7 +4,7 @@ import {
   slideDownAnim,
   slideUpAnim,
   slideRTLAnim,
-} from "../animation/animation";
+} from "../../utils/animation";
 import sectionOne from "../../assets/img/homeSectionOne.svg";
 
 const SectionOne = ({ isDesktop }) => {

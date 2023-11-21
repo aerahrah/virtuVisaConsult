@@ -8,7 +8,7 @@ import {
   BiSolidMap,
   BiLogoTiktok,
 } from "react-icons/bi";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../../utils/scrollToTop";
 import { Link } from "react-router-dom";
 
 const navItems = [

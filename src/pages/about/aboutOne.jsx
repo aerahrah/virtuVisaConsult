@@ -1,4 +1,4 @@
-import { slideLTRAnim, scaleAnim, slideUpAnim } from "../animation/animation";
+import { slideLTRAnim, scaleAnim, slideUpAnim } from "../../utils/animation";
 import { motion } from "framer-motion";
 
 const AboutOne = ({ isDesktop }) => {
