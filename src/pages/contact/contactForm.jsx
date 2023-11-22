@@ -1,34 +1,65 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { scaleAnim } from "../../utils/animation";
 import React, { useState, useRef } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
+import * as yup from "yup";
 
 const ContactForm = () => {
   const PUBLIC_KEY = "W0_1f7BwrmtsMtjAx";
   const TEMPLATE_ID = "template_la2t6vm";
   const SERVICE_ID = "service_r2ydv6h";
   const [message, setMessage] = useState("");
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-      (result) => {
-        if (result.text === "OK") {
-          setMessage("Sent email successfully");
-          setTimeout(() => {
-            setMessage("");
-          }, 3000);
-        }
-      },
-      (error) => {
-        setMessage(error);
+  const form = useRef();
+  const schema = yup.object().shape({
+    user_name: yup.string().required("Username is required"),
+    user_phone: yup
+      .string()
+      .required("Phone number is required")
+      .matches(/^[0-9]+$/, "Please enter a valid phone number")
+      .min(10, "Phone number must be at least 10 digits"),
+    subject: yup.string().required("Subject is required"),
+    user_email: yup
+      .string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    message: yup.string().required("Message is required"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const sendEmail = async () => {
+    try {
+      const result = await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current,
+        PUBLIC_KEY
+      );
+
+      if (result.text === "OK") {
+        setMessage("Sent email successfully");
         setTimeout(() => {
           setMessage("");
         }, 3000);
       }
-    );
+    } catch (error) {
+      console.log(error);
+      setMessage(error.message || "Error sending email");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+    }
   };
+
   return (
     <AnimatePresence>
       <div className="bg-white py-12 md:pb-16 lg:pb-24 px-6 md:px-12 lg:px-16 text-neutral-800 bg-white">
@@ -44,50 +75,85 @@ const ContactForm = () => {
             </div>
           </div>
           <form
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit(sendEmail)}
             className="w-full mx-auto py-6 pt-12 relative"
             ref={form}
           >
-            <div className="grid md:grid-cols-2 gap-4 w-full">
-              <input
-                className="bg-neutral-100 py-3 px-4 rounded-md w-full border-[1px] focus:outline focus:outline-blue-500"
-                type="text"
-                name="user_name"
-                placeholder="Full name"
-                required
-              />
-              <input
-                className="bg-neutral-100 py-3 px-4 rounded-md w-full border-[1px] focus:outline focus:outline-blue-500"
-                type="tel"
-                name="user_phone"
-                placeholder="Phone number"
-                required
-              />
-              <input
-                className="bg-neutral-100 py-3 px-4 rounded-md w-full border-[1px] focus:outline focus:outline-blue-500"
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                required
-              />
-              <input
-                className="bg-neutral-100 py-3 px-4 rounded-md w-full border-[1px] focus:outline focus:outline-blue-500"
-                type="email"
-                id="email"
-                name="user_email"
-                placeholder="Email"
-                required
-              />
-              <textarea
-                className="bg-neutral-100 py-3 px-4 rounded-md w-full border-[1px] focus:outline focus:outline-blue-500 col-span-full"
-                id="message"
-                name="message"
-                placeholder="Message"
-                rows={7}
-                required
-              ></textarea>
+            <div className="grid md:grid-cols-2 gap-6 w-full">
+              <div className="w-full relative">
+                <input
+                  className={`${
+                    errors.user_name ? "!outline-red-500" : ""
+                  } bg-neutral-100 py-3 px-4 rounded-md w-full outline outline-1 outline-neutral-300 focus:outline-blue-500`}
+                  type="text"
+                  name="user_name"
+                  {...register("user_name")}
+                  placeholder="Full name"
+                />
+                <p className="absolute text-xs text-red-500">
+                  {errors.user_name?.message}
+                </p>
+              </div>
 
+              <div className="w-full relative">
+                <input
+                  className={`${
+                    errors.user_phone ? "!outline-red-500" : ""
+                  } bg-neutral-100 py-3 px-4 rounded-md w-full outline outline-1 outline-neutral-300 focus:outline-blue-500`}
+                  type="tel"
+                  name="user_phone"
+                  {...register("user_phone")}
+                  placeholder="Phone number"
+                />
+                <p className="absolute text-xs text-red-500">
+                  {errors.user_phone?.message}
+                </p>
+              </div>
+              <div className="w-full relative">
+                <input
+                  className={`${
+                    errors.subject ? "!outline-red-500" : ""
+                  } bg-neutral-100 py-3 px-4 rounded-md w-full outline outline-1 outline-neutral-300 focus:outline-blue-500`}
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  {...register("subject")}
+                  placeholder="Subject"
+                />
+                <p className="absolute text-xs text-red-500">
+                  {errors.subject?.message}
+                </p>
+              </div>
+              <div className="w-full relative">
+                <input
+                  className={`${
+                    errors.user_email ? "!outline-red-500" : ""
+                  } bg-neutral-100 py-3 px-4 rounded-md w-full outline outline-1 outline-neutral-300 focus:outline-blue-500`}
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  {...register("user_email")}
+                  placeholder="Email"
+                />
+                <p className="absolute text-xs text-red-500">
+                  {errors.user_email?.message}
+                </p>
+              </div>
+              <div className="w-full relative col-span-full">
+                <textarea
+                  className={`${
+                    errors.message ? "!outline-red-500" : ""
+                  } bg-neutral-100 py-3 px-4 rounded-md w-full outline outline-1 outline-neutral-300 focus:outline-blue-500`}
+                  id="message"
+                  name="message"
+                  {...register("message")}
+                  placeholder="Message"
+                  rows={7}
+                ></textarea>
+                <p className="absolute text-xs text-red-500">
+                  {errors.message?.message}
+                </p>
+              </div>
               {message && (
                 <motion.p
                   className="absolute bottom-[5rem] text-lg text-green-700 font-semibold text-center w-full"
@@ -100,13 +166,11 @@ const ContactForm = () => {
                   {message}
                 </motion.p>
               )}
-
-              <button
+              <input
+                className="relative z-50 transform transition duration-100 bg-blue-500 text-blue-100 rounded-full py-3 px-10 cursor-pointer capitalize  mx-auto col-span-full hover:scale-[1.02] mt-4"
                 type="submit"
-                className="bg-blue-500 text-blue-100 rounded-full py-3 px-10 capitalize mt-8 mx-auto col-span-full"
-              >
-                send message
-              </button>
+                value="Sign in"
+              />
             </div>
           </form>
         </div>

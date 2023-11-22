@@ -47,7 +47,7 @@ const ServicesTwo = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-neutral-900 py-12 md:py-16 lg:py-24 px-6  md:px-12 lg:px-16  text-neutral-300  overflow-hidden">
+    <div className="min-h-screen bg-neutral-900 py-12 md:py-16 lg:py-24 px-6  md:px-12 lg:px-16  text-neutral-300  ">
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 ">
           <motion.div

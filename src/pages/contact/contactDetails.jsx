@@ -6,7 +6,7 @@ const ContactDetails = () => {
     {
       icon: <BiSolidPhone className="h-10 w-10 text-blue-100" />,
       title: "phone no",
-      content: "+901 152 485 85",
+      content: "(+63) 976-095-0232",
     },
     {
       icon: <BiMailSend className="h-10 w-10 text-blue-100" />,
