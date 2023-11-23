@@ -31,11 +31,11 @@ const ContactDetails = () => {
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
           <div className="text-center">
-            <h3 className="text-2xl capitalize font-bold tracking-tight text-blue-500">
+            <h3 className="text-5xl md:text-6xl capitalize font-black tracking-tight text-neutral-800 mb-3">
               contact us
             </h3>
-            <h1 className="text-4xl md:text-5xl font-extrabold max-w-[40rem] mx-auto">
-              Needs help? let's get in touch
+            <h1 className="text-3xl font-bold max-w-[50rem] mx-auto text-neutral-600">
+              For your inquiries, feedback and suggestions
             </h1>
           </div>
 

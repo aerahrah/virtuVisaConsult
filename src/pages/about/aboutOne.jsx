@@ -1,5 +1,6 @@
 import { slideLTRAnim, scaleAnim, slideUpAnim } from "../../utils/animation";
 import { motion } from "framer-motion";
+import trustImg from "../../assets/img/about/aboutSecOne.svg";
 
 const AboutOne = ({ isDesktop }) => {
   return (
@@ -7,9 +8,9 @@ const AboutOne = ({ isDesktop }) => {
       <div className="h-full py-12 lg:py-16 !pt-24  w-full max-w-[1164px] mx-auto flex flex-col gap-8 md:gap-12 lg:gap-16">
         <div className="text-center flex flex-wrap flex-col gap-4">
           <h1 className="text-4xl md:text-5xl font-black capitalize">
-            About our company
+            About us
           </h1>
-          <p className="max-w-[40rem] mx-auto text-justify">
+          <p className="max-w-[40rem] mx-auto text-center">
             Discover who we are, what we stand for, and our commitment to
             helping you achieve your visa and immigration goals. At{" "}
             <span className="text-lg font-bold">VirtuVisaConsult</span>, we're
@@ -51,7 +52,9 @@ const AboutOne = ({ isDesktop }) => {
             viewport={{ once: true }}
             variants={isDesktop ? scaleAnim(0, 0.75) : slideUpAnim(0)}
           >
-            <div className="h-96 w-96 bg-neutral-300"></div>
+            <div className="h-96 w-96 ">
+              <img src={trustImg} alt="Trash Can" className="" />
+            </div>
           </motion.div>
         </div>
       </div>

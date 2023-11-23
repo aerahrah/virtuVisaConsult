@@ -66,11 +66,11 @@ const ContactForm = () => {
         <div className="w-full max-w-[1164px] mx-auto h-full">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
             <div className="text-center">
-              <h3 className="text-2xl capitalize font-bold tracking-tight text-blue-500">
+              <h3 className="text-5xl md:text-6xl capitalize font-black tracking-tight text-neutral-800 mb-3">
                 Get In Touch
               </h3>
-              <h1 className="text-4xl md:text-5xl font-extrabold max-w-[40rem] mx-auto">
-                Feel free to contact with us any time.
+              <h1 className="text-3xl font-bold max-w-[50rem] mx-auto text-neutral-600">
+                Drop us a message, and we'll get back to you shortly
               </h1>
             </div>
           </div>

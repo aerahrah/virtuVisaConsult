@@ -1,5 +1,6 @@
 import { slideRTLAnim, scaleAnim, slideUpAnim } from "../../utils/animation";
 import { motion } from "framer-motion";
+import supportImg from "../../assets/img/about/aboutSecTwo.svg";
 
 const AboutTwo = ({ isDesktop }) => {
   return (
@@ -20,7 +21,7 @@ const AboutTwo = ({ isDesktop }) => {
                 </span>
               </h3>
               <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center md:text-start">
-                Your Visa Application Journey with Us
+                Visa Application Journey with Us
               </h1>
               <p className="text-justify">
                 We aspire to be your trusted partner in navigating the
@@ -39,7 +40,9 @@ const AboutTwo = ({ isDesktop }) => {
             viewport={{ once: true }}
             variants={isDesktop ? scaleAnim(0, 0.75) : slideUpAnim(0)}
           >
-            <div className="h-96 w-96 bg-neutral-300"></div>
+            <div className="h-96 w-96 ">
+              <img src={supportImg} alt="Trash Can" className="" />
+            </div>
           </motion.div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { slideLTRAnim, scaleAnim, slideUpAnim } from "../../utils/animation";
 import { motion } from "framer-motion";
+import travelImg from "../../assets/img/about/aboutSecThree.svg";
 
 const AboutThree = ({ isDesktop }) => {
   return (
@@ -20,7 +21,7 @@ const AboutThree = ({ isDesktop }) => {
                 </span>
               </h3>
               <h1 className="text-3xl md:text-4xl font-bold mb-2 text-center md:text-start">
-                Your Passport to Memorable Moments
+                Passport to Memorable Moments
               </h1>
               <p className="text-justify">
                 We excel in visitor visas, ensuring seamless journeys for your
@@ -37,7 +38,9 @@ const AboutThree = ({ isDesktop }) => {
             viewport={{ once: true }}
             variants={isDesktop ? scaleAnim(0, 0.75) : slideUpAnim(0)}
           >
-            <div className="h-96 w-96 bg-neutral-300"></div>
+            <div className="h-96 w-96 ">
+              <img src={travelImg} alt="Trash Can" className="" />
+            </div>
           </motion.div>
         </div>
       </div>

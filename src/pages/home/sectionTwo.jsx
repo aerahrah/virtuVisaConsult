@@ -1,4 +1,6 @@
 import { BiRightArrowAlt } from "react-icons/bi";
+import { AiOutlineFileText } from "react-icons/ai";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import { motion } from "framer-motion";
 import { slideDownAnim, slideUpAnim } from "../../utils/animation";
 import { Link } from "react-router-dom";
@@ -8,10 +10,16 @@ const SectionTwo = ({ isDesktop }) => {
   const servicesItems = [
     {
       icon: <FaRegRectangleList className="h-20 w-20 " />,
-      title: "Visa elibility assessment",
+      title: "Visa elibility evaluation and assessment",
     },
-    { icon: "hello1", title: "application Process and submission assistance" },
-    { icon: "hello3", title: "application tracking and updates" },
+    {
+      icon: <AiOutlineFileText className="h-20 w-20 " />,
+      title: "application Process and submission assistance",
+    },
+    {
+      icon: <IoIosNotificationsOutline className="h-20 w-20 " />,
+      title: "application tracking and updates",
+    },
   ];
 
   return (
@@ -28,7 +36,7 @@ const SectionTwo = ({ isDesktop }) => {
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our services
             </h1>
-            <p className="max-w-[40rem] text-justify">
+            <p className="max-w-[40rem] text-center">
               We offer a comprehensive range of services tailored to meet your
               diverse visa and immigration needs. Our commitment is to simplify
               your journey by providing expert guidance, top-notch support, and

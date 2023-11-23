@@ -5,7 +5,7 @@ import {
   slideUpAnim,
   slideRTLAnim,
 } from "../../utils/animation";
-import sectionOne from "../../assets/img/homeSectionOne.svg";
+import sectionOne from "../../assets/img/home/homeSectionOne.svg";
 
 const SectionOne = ({ isDesktop }) => {
   const sectionOneRef = useRef(null);
@@ -35,7 +35,7 @@ const SectionOne = ({ isDesktop }) => {
                 we're your visa journey partners for visitor visas. Explore,
                 reunite, and experience new horizons with our expert guidance.
                 We'll make your application seamless and stress-free , ensuring
-                peace of mind throughout the process. Begin your journey today!"
+                peace of mind throughout the process. Begin your journey today!
               </p>
             </motion.div>
             <motion.div

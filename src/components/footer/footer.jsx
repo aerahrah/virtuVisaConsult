@@ -33,19 +33,19 @@ const navItems = [
 const socialMediaIcons = [
   {
     icon: <BiLogoFacebookCircle className="h-8 w-8" />,
-    link: "https://www.facebook.com",
+    link: "https://www.facebook.com/profile.php?id=61552052811578&mibextid=2JQ9oc",
   },
   {
     icon: <BiLogoTwitter className="h-8 w-8" />,
-    link: "https://www.twitter.com",
+    link: "https://x.com/virtuvisa?t=xuCiPMKnh7Jpp-7627wkHQ&s=09",
   },
   {
     icon: <BiLogoInstagram className="h-8 w-8" />,
-    link: "https://www.instagram.com",
+    link: "https://instagram.com/virtuvisaconsult?igshid=YTQwZjQ0NmI0OA==",
   },
   {
     icon: <BiLogoTiktok className="h-8 w-8" />,
-    link: "https://www.instagram.com",
+    link: "https://www.tiktok.com/@virtuvisaconsult?_t=8gpFxyzQNzV&_r=1",
   },
 ];
 
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4 transition transform">
             <h3 className="text-2xl font-bold capitalize">about us</h3>
             <p>
-              Your trusted visa and immigration partners. Simplifying your
+              Your trusted visitor visa application partners. Simplifying your
               journey to explore new horizons.
             </p>
             <ul className="flex gap-4">

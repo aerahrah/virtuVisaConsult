@@ -60,7 +60,7 @@ const ServicesTwo = () => {
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our packages
             </h1>
-            <p className="max-w-[40rem] text-justify">
+            <p className="max-w-[40rem] text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
               unde incidunt, est quod alias recusandae totam repellendus.
             </p>
