@@ -5,13 +5,15 @@ import {
 } from "react-icons/bs";
 import annie from "../../assets/img/testimonial/annie.jpg";
 import susan from "../../assets/img/testimonial/susan.jpg";
+import sophia from "../../assets/img/testimonial/sophia.jpg";
+import florie from "../../assets/img/testimonial/susan.jpg";
 const Testimonial = () => {
   let [current, setCurrent] = useState(0);
 
   let slides = [
-    { img: annie, review: "lorem ipsum", name: "annie ramirez" },
+    { img: annie, review: "lorem ipsum", name: "annita r. miguel" },
     { img: susan, review: "lorem ipsum", name: "susan ramirez" },
-    { img: annie, review: "lorem ipsum", name: "annie ramirez" },
+    { img: sophia, review: "lorem ipsum", name: "sophia ramirez" },
     { img: annie, review: "lorem ipsum", name: "annie ramirez" },
   ];
   let previousSlide = () => {
@@ -55,7 +57,7 @@ const Testimonial = () => {
                   </div>
                   <div className="p-6 md:p-12 md:pl-16 lg:p-16 lg:pl-24 flex flex-col justify-between h-full gap-4 text-justify">
                     <p>{review}</p>
-                    <h5 className="text-2xl font-bold">{name}</h5>
+                    <h5 className="text-2xl font-bold capitalize">{name}</h5>
                   </div>
                 </div>
               </div>

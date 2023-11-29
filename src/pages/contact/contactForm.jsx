@@ -167,7 +167,7 @@ const ContactForm = () => {
                 </motion.p>
               )}
               <input
-                className="relative z-50 transform transition duration-100 bg-blue-500 text-blue-100 rounded-full py-3 px-10 cursor-pointer capitalize  mx-auto col-span-full hover:scale-[1.02] mt-4"
+                className="relative transform transition duration-100 bg-blue-500 text-blue-100 rounded-full py-3 px-10 cursor-pointer capitalize  mx-auto col-span-full hover:scale-[1.02] mt-4"
                 type="submit"
                 value="Send message"
               />

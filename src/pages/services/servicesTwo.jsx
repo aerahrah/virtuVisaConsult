@@ -5,10 +5,9 @@ import { BiCheckCircle } from "react-icons/bi";
 const ServicesTwo = () => {
   const planItems = [
     {
-      name: "free consultation plan",
+      name: "Free Package",
       price: "free",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
+      description: "Essentials for a Seamless Start",
       services: [
         "Education Assessment",
         "School & Program Selection",
@@ -18,10 +17,9 @@ const ServicesTwo = () => {
       ],
     },
     {
-      name: "single application plan",
+      name: "Single Application Package",
       price: "10000",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
+      description: "Tailored Support for Solo apllicant",
       services: [
         "Education Assessment",
         "School & Program Selection",
@@ -33,10 +31,9 @@ const ServicesTwo = () => {
       ],
     },
     {
-      name: "group application plan",
+      name: "Family Application Package",
       price: "15000",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
+      description: "Unified Assistance for a Collective Journey",
       services: [
         "Education Assessment",
         "School & Program Selection",
@@ -60,9 +57,11 @@ const ServicesTwo = () => {
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our packages
             </h1>
-            <p className="max-w-[40rem] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-              unde incidunt, est quod alias recusandae totam repellendus.
+            <p className="max-w-[40rem] text-justify md:text-center">
+              Choose from our array of packages, designed to cater to diverse
+              needs and preferences, each promising a distinctive pathway to
+              your destination. Let us be your trusted companion on this
+              transformative voyage!
             </p>
           </motion.div>
           <motion.div className="grid grid-cols md:grid-cols-2  lg:grid-cols-3 gap-8 h-full w-full mx-auto justify-items-center">
@@ -76,11 +75,11 @@ const ServicesTwo = () => {
                   }`}
                 >
                   <div className={`bg-neutral-800 p-6 rounded-lg`} key={idx}>
-                    <div className="mb-10 text-center">
-                      <h3 className="uppercase text-xl font-bold mb-1 text-blue-500">
+                    <div className="flex flex-col gap-2 mb-10 text-center">
+                      <h3 className="uppercase text-2xl font-bold text-blue-500">
                         {name}
                       </h3>
-                      <p>{description}</p>
+                      <p className="text-sm">{description}</p>
                     </div>
                     <p className="mb-10 text-center tracking-tight">
                       Starts at

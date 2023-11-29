@@ -9,15 +9,17 @@ import { FaRegRectangleList } from "react-icons/fa6";
 const SectionTwo = ({ isDesktop }) => {
   const servicesItems = [
     {
-      icon: <FaRegRectangleList className="h-20 w-20 " />,
+      icon: <FaRegRectangleList className="h-16 w-16 md:h-20 md:w-20 " />,
       title: "Visa elibility evaluation and assessment",
     },
     {
-      icon: <AiOutlineFileText className="h-20 w-20 " />,
+      icon: <AiOutlineFileText className="h-16 w-16 md:h-20 md:w-20  " />,
       title: "application Process and submission assistance",
     },
     {
-      icon: <IoIosNotificationsOutline className="h-20 w-20 " />,
+      icon: (
+        <IoIosNotificationsOutline className="h-16 w-16 md:h-20 md:w-20  " />
+      ),
       title: "application tracking and updates",
     },
   ];
@@ -36,7 +38,7 @@ const SectionTwo = ({ isDesktop }) => {
             <h1 className="text-4xl md:text-5xl font-bold capitalize">
               our services
             </h1>
-            <p className="max-w-[40rem] text-center">
+            <p className="max-w-[40rem] text-justify md:text-center">
               We offer a comprehensive range of services tailored to meet your
               diverse visa and immigration needs. Our commitment is to simplify
               your journey by providing expert guidance, top-notch support, and

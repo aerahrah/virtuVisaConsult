@@ -1,55 +1,53 @@
 import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { slideDownAnim, slideUpAnim } from "../../utils/animation";
-import { BsPencil, BsFileEarmarkCheck } from "react-icons/bs";
 import {
   FaChartBar,
   FaFileSignature,
   FaPaperPlane,
-  FaClipboardList,
+  FaClipboardCheck,
   FaUserCog,
 } from "react-icons/fa";
 import { IoIosDocument } from "react-icons/io";
-import { IoBusiness } from "react-icons/io5";
 
 const ServicesOne = ({ isDesktop }) => {
   const servicesItems = [
     {
-      icon: <FaChartBar className="h-10 w-10" />,
-      title: "Individual evaluation",
+      icon: <FaChartBar className="h-8 w-8 md:h-10 md:w-10" />,
+      title: "Individual evaluation and assessment",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
+        "Evaluation of an individual's eligibility for a Canadian visitor visa, taking into account factors such as travel history, financial situation, and purpose of the visit.",
     },
     {
-      icon: <IoIosDocument className="h-10 w-10" />,
+      icon: <IoIosDocument className="h-8 w-8 md:h-10 md:w-10" />,
       title: "documents preparation and review",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
+        "Support in gathering and preparing all required documents. Reviewing and verifying the completeness and accuracy of the application package. ",
     },
     {
-      icon: <FaFileSignature className="h-10 w-10" />,
-      title: "account creation and form assistance",
+      icon: <FaFileSignature className="h-8 w-8 md:h-10 md:w-10" />,
+      title: "Account Setup And Form Assistance",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
+        "Real-time setting up IRCC portal or GCKEY account. Full aid on filling out, and help on completing the necessary visa application forms.",
     },
     {
-      icon: <BsFileEarmarkCheck className="h-10 w-10" />,
-      title: "revision and finalization of documents",
+      icon: <FaClipboardCheck className="h-8 w-8 md:h-10 md:w-10" />,
+      title: "Polishing and Finalizing Documents",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
+        "Comprehensive editing phase and overall enhancement of the documents. Creating a polished and well-crafted final version, ready for submission. ",
     },
     {
-      icon: <FaPaperPlane className="h-10 w-10" />,
+      icon: <FaPaperPlane className="h-8 w-8 md:h-10 md:w-10" />,
       title: "application submission",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
+        "Assistance in lodging the application with a focus on precision and adherence to guidelines including appropriate submission channels and fee payment. ",
     },
     {
-      icon: <FaUserCog className="h-10 w-10" />,
+      icon: <FaUserCog className="h-8 w-8 md:h-10 md:w-10" />,
 
-      title: "application tracking and account updates",
+      title: "Follow-up, Tracking And Account Updates",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
+        "Ensure transparency by keeping applicants informed about the status of their visa application and providing updates on any requests for additional information.",
     },
   ];
 
@@ -61,9 +59,11 @@ const ServicesOne = ({ isDesktop }) => {
             <h1 className="text-4xl md:text-5xl font-black capitalize text-center ">
               our services and How It Work
             </h1>
-            <p className="max-w-[40rem] text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-              unde incidunt, est quod alias recusandae totam repellendus.
+            <p className="max-w-[40rem] text-justify md:text-center">
+              Streamline your journey with us—from assessments to document
+              preparation and beyond. Our client-focused approach and expert
+              assistance redefine your experience, making your goals
+              effortlessly achievable!
             </p>
           </motion.div>
           <motion.div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 h-full">
@@ -83,7 +83,7 @@ const ServicesOne = ({ isDesktop }) => {
                 >
                   <i>{icon}</i>
                   <h3 className="text-2xl font-bold capitalize">{title}</h3>
-                  <p className="">{description}</p>
+                  <p className="text-justify">{description}</p>
 
                   <i className="absolute top-[-3rem] right-[-1rem] h-24 w-24 bg-blue-400 opacity-50 rounded-full"></i>
                   <i className="absolute top-[-1rem] right-[-3rem] h-24 w-24  bg-blue-600 opacity-50 rounded-full"></i>

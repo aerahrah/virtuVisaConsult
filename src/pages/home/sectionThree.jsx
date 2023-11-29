@@ -45,10 +45,10 @@ const SectionThree = ({ isDesktop }) => {
               viewport={{ once: true }}
               variants={slideDownAnim(0)}
             >
-              <h1 className="text-5xl font-extrabold capitalize">
+              <h1 className="text-4xl md:text-5xl text-center md:text-start font-extrabold capitalize">
                 Why choose us
               </h1>
-              <p className="max-w-[40rem] text-justify">
+              <p className="max-w-[40rem] text-justify mx-auto">
                 At VirtuVisa Consultation, trust our expertise for a smooth,
                 hassle-free visa journey with personalized service and
                 convenience. Choose excellence with our dedicated team.
@@ -75,7 +75,7 @@ const SectionThree = ({ isDesktop }) => {
                     <h3 className="text-2xl font-bold capitalize tracking-tight">
                       {title}
                     </h3>
-                    <p>{content}</p>
+                    <p className="text-justify">{content}</p>
                   </div>
                 </motion.div>
               ))}
