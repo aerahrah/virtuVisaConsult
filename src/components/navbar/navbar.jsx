@@ -3,6 +3,7 @@ import { scrollToTop } from "../../utils/scrollToTop";
 import { BiMenu } from "react-icons/bi";
 import { useState } from "react";
 import { navItems } from "./navbarContent";
+import logosample from "../../assets/img/logo/LOGO.png";
 import NavbarMobile from "./navbarMobile";
 
 const NavBar = () => {
@@ -14,7 +15,11 @@ const NavBar = () => {
     <div className=" w-full px-6 md:px-12 lg:px-16 bg-blue-600 fixed md:shadow-md z-30 ">
       <div className="relative bg-blue-600 h-full  py-4">
         <div className="flex justify-between w-full  mx-auto items-center max-w-[1164px]">
-          <h1>logo</h1>
+          <img
+            src={logosample}
+            alt="Trash Can"
+            className="w-10 transform scale-[1.5]"
+          />
           <div className="hidden md:block">
             <div className="flex gap-4 text-blue-50 transition">
               {navItems.map(({ link, content }, idx) => {

@@ -66,10 +66,10 @@ const ContactForm = () => {
         <div className="w-full max-w-[1164px] mx-auto h-full">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
             <div className="text-center">
-              <h3 className="text-5xl md:text-6xl capitalize font-black tracking-tight text-neutral-800 mb-3">
+              <h3 className="text-4xl md:text-5xl capitalize font-black tracking-tight text-neutral-800 mb-3">
                 Get In Touch
               </h3>
-              <h1 className="text-3xl font-bold max-w-[50rem] mx-auto text-neutral-600">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold max-w-[50rem] mx-auto text-neutral-600">
                 Drop us a message, and we'll get back to you shortly
               </h1>
             </div>
@@ -169,7 +169,7 @@ const ContactForm = () => {
               <input
                 className="relative z-50 transform transition duration-100 bg-blue-500 text-blue-100 rounded-full py-3 px-10 cursor-pointer capitalize  mx-auto col-span-full hover:scale-[1.02] mt-4"
                 type="submit"
-                value="Sign in"
+                value="Send message"
               />
             </div>
           </form>

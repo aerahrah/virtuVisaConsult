@@ -1,40 +1,52 @@
 import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { slideDownAnim, slideUpAnim } from "../../utils/animation";
+import { BsPencil, BsFileEarmarkCheck } from "react-icons/bs";
+import {
+  FaChartBar,
+  FaFileSignature,
+  FaPaperPlane,
+  FaClipboardList,
+  FaUserCog,
+} from "react-icons/fa";
+import { IoIosDocument } from "react-icons/io";
+import { IoBusiness } from "react-icons/io5";
+
 const ServicesOne = ({ isDesktop }) => {
   const servicesItems = [
     {
-      icon: "hello",
+      icon: <FaChartBar className="h-10 w-10" />,
       title: "Individual evaluation",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
     },
     {
-      icon: "hello",
+      icon: <IoIosDocument className="h-10 w-10" />,
       title: "documents preparation and review",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
     {
-      icon: "hello",
-      title: "application creation and form assistance",
+      icon: <FaFileSignature className="h-10 w-10" />,
+      title: "account creation and form assistance",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
     {
-      icon: "hello",
-      title: "Business Thought",
+      icon: <BsFileEarmarkCheck className="h-10 w-10" />,
+      title: "revision and finalization of documents",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
     {
-      icon: "hello",
+      icon: <FaPaperPlane className="h-10 w-10" />,
       title: "application submission",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint ",
     },
     {
-      icon: "hello",
+      icon: <FaUserCog className="h-10 w-10" />,
+
       title: "application tracking and account updates",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis fugit quis corrupti, esse aspernatur quam molestias omnis provident sapiente sint",
@@ -75,7 +87,7 @@ const ServicesOne = ({ isDesktop }) => {
 
                   <i className="absolute top-[-3rem] right-[-1rem] h-24 w-24 bg-blue-400 opacity-50 rounded-full"></i>
                   <i className="absolute top-[-1rem] right-[-3rem] h-24 w-24  bg-blue-600 opacity-50 rounded-full"></i>
-                  <h3 className="absolute top-[.5rem] right-[1rem] font-bold text-2xl">
+                  <h3 className="absolute top-[.5rem] right-[1rem] font-bold text-blue-50 text-2xl">
                     {idx + 1}
                   </h3>
                 </motion.div>

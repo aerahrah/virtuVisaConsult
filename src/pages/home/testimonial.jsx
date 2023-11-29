@@ -3,15 +3,16 @@ import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
-
+import annie from "../../assets/img/testimonial/annie.jpg";
+import susan from "../../assets/img/testimonial/susan.jpg";
 const Testimonial = () => {
   let [current, setCurrent] = useState(0);
 
   let slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+    { img: annie, review: "lorem ipsum", name: "annie ramirez" },
+    { img: susan, review: "lorem ipsum", name: "susan ramirez" },
+    { img: annie, review: "lorem ipsum", name: "annie ramirez" },
+    { img: annie, review: "lorem ipsum", name: "annie ramirez" },
   ];
   let previousSlide = () => {
     if (current === 0) setCurrent(slides.length - 1);
@@ -41,7 +42,7 @@ const Testimonial = () => {
             transform: `translateX(-${current * 100}%)`,
           }}
         >
-          {slides.map((img, index) => (
+          {slides.map(({ img, review, name }, index) => (
             <div className="w-full" key={index}>
               <div className="w-[100vw] max-w-[100%]">
                 <div className="relative  min-h-64 bg-white   shadow-lg border-[1px] border-neutral-200 rounded-lg w-[100vw]  max-w-[90%] md:max-w-[70%] md:ml-[14vw] mx-auto">
@@ -53,14 +54,8 @@ const Testimonial = () => {
                     />
                   </div>
                   <div className="p-6 md:p-12 md:pl-16 lg:p-16 lg:pl-24 flex flex-col justify-between h-full gap-4 text-justify">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Quisquam architecto odio necessitatibus aliquid quod
-                      explicabo, suscipit quidem ad. Magni labore possimus
-                      aliquam blanditiis, provident cumque quasi consequuntur?
-                      Dolore, adipisci repellendus!
-                    </p>
-                    <h5 className="text-2xl font-bold">Luis Ramirez</h5>
+                    <p>{review}</p>
+                    <h5 className="text-2xl font-bold">{name}</h5>
                   </div>
                 </div>
               </div>
@@ -78,7 +73,7 @@ const Testimonial = () => {
         </div>
       </div>
       <div className=" py-4 flex justify-center gap-3 w-full z-30">
-        {slides.map((img, i) => (
+        {slides.map(({ img }, i) => (
           <img
             onClick={() => {
               setCurrent(i);

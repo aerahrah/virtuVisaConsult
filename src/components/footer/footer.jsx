@@ -10,6 +10,7 @@ import {
 } from "react-icons/bi";
 import { scrollToTop } from "../../utils/scrollToTop";
 import { Link } from "react-router-dom";
+import logosample from "../../assets/img/logo/LOGO.png";
 
 const navItems = [
   {
@@ -55,7 +56,13 @@ const Footer = () => {
       <div className="w-full max-w-[1164px] mx-auto h-full">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-between gap-8 md:gap-10 w-full">
           <div>
-            <div className="w-48 h-48  bg-blue-500"></div>
+            <div className="w-48 h-48 rounded-full">
+              <img
+                src={logosample}
+                alt="Trash Can"
+                className="w-48 h-48  transform lg:scale-[1.4]"
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-4 transition transform">
             <h3 className="text-2xl font-bold capitalize">about us</h3>

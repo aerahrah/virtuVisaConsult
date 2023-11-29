@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { AiOutlineEye } from "react-icons/ai";
-import { IoIosHelpCircleOutline } from "react-icons/io";
 import { MdSmartphone } from "react-icons/md";
 import { AiFillUnlock } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
