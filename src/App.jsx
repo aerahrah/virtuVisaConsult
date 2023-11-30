@@ -12,10 +12,10 @@ function App() {
     <div className="overflow-hidden  tracking-wide">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/virtuVisaConsult/" element={<Home />} />
+        <Route path="/virtuVisaConsult/about" element={<About />} />
+        <Route path="/virtuVisaConsult/services" element={<Services />} />
+        <Route path="/virtuVisaConsult/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

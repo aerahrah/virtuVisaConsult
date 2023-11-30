@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MdSmartphone } from "react-icons/md";
 import { AiFillUnlock } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
 import fullAccess from "../../assets/img/home/homeSecTwoFullAccess.svg";
 import fullAssistance from "../../assets/img/home/homeSecThreeFullAssistance.svg";
 import fullVirtualTransaction from "../../assets/img/home/homeSecThreeVirtual.svg";
@@ -12,6 +13,7 @@ import {
   slideRTLAnim,
 } from "../../utils/animation";
 const SectionThree = ({ isDesktop }) => {
+  const isMobile = useMediaQuery({ maxWidth: 476 });
   const steps = [
     {
       icon: <MdSmartphone className="h-20 w-20 " />,
@@ -37,7 +39,7 @@ const SectionThree = ({ isDesktop }) => {
     <div className="bg-white px-6 md:px-12 lg:px-16 text-neutral-800">
       <div className="min-h-screen py-16 md:py-24 w-full max-w-[1164px] mx-auto overflow-hidden">
         <div className=" h-full grid lg:grid-cols-2 place-items-center items-center gap-6">
-          <div className="flex flex-col gap-14 ">
+          <div className="flex flex-col gap-12 lg:gap-16 ">
             <motion.div
               className="flex flex-col gap-6"
               initial="hidden"
@@ -48,7 +50,7 @@ const SectionThree = ({ isDesktop }) => {
               <h1 className="text-4xl md:text-5xl text-center md:text-start font-extrabold capitalize">
                 Why choose us
               </h1>
-              <p className="max-w-[40rem] text-justify mx-auto">
+              <p className="max-w-[40rem] text-justify mx-auto md:mx-0">
                 At VirtuVisa Consultation, trust our expertise for a smooth,
                 hassle-free visa journey with personalized service and
                 convenience. Choose excellence with our dedicated team.
@@ -58,7 +60,6 @@ const SectionThree = ({ isDesktop }) => {
               {steps.map(({ icon, title, content }, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex gap-4 items-center"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
@@ -68,14 +69,33 @@ const SectionThree = ({ isDesktop }) => {
                       : slideUpAnim(0.15 * (idx + 1))
                   }
                 >
-                  <i className="block bg-blue-200 rounded-xl p-2 text-neutral-700">
-                    {icon}
-                  </i>
-                  <div className="flex flex-col gap-1 justify-between">
-                    <h3 className="text-2xl font-bold capitalize tracking-tight">
+                  <div
+                    className={`${
+                      isMobile ? "hidden" : "flex"
+                    }  gap-4 items-center`}
+                  >
+                    <i className="block bg-blue-200 rounded-xl p-2 text-neutral-700">
+                      {icon}
+                    </i>
+                    <div className="flex flex-col gap-1 justify-between">
+                      <h3 className="text-2xl font-bold capitalize tracking-tight">
+                        {title}
+                      </h3>
+                      <p className="text-justify">{content}</p>
+                    </div>
+                  </div>
+                  <div className={`${isMobile ? "block" : "hidden"} `}>
+                    <h3 className="text-2xl font-bold capitalize tracking-tight mb-2">
                       {title}
                     </h3>
-                    <p className="text-justify">{content}</p>
+                    <div className="flex gap-4 items-center">
+                      <div className="flex gap-4 items-start">
+                        <i className="block bg-blue-200 rounded-xl p-2 text-neutral-700">
+                          {icon}
+                        </i>
+                        <p className="text-justify">{content}</p>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}

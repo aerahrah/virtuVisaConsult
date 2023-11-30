@@ -10,7 +10,7 @@ const AboutOne = ({ isDesktop }) => {
           <h1 className="text-4xl md:text-5xl font-black capitalize">
             About us
           </h1>
-          <p className="max-w-[40rem] mx-auto text-center">
+          <p className="max-w-[40rem] mx-auto text-justify md:text-center">
             Discover who we are, what we stand for, and our commitment to
             helping you achieve your visa and immigration goals. At{" "}
             <span className="text-lg font-bold">VirtuVisaConsult</span>, we're
